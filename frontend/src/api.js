@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "http://localhost:5000/api",
+  baseURL: import.meta.env.VITE_API_URL,
 });
 
 export const getProducts = async () => {
@@ -18,7 +18,6 @@ export const deleteProduct = async (id) => {
   await api.delete(`/product/${id}`);
 };
 
-/* ✅ ADD THIS (EDIT / UPDATE) */
 export const updateProduct = async (id, data) => {
   const res = await api.put(`/product/${id}`, data);
   return res.data;
