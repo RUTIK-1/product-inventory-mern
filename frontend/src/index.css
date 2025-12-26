@@ -1,0 +1,66 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+#root {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+}
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+}
+#app-root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.main-content {
+  flex: 1;
+}
+
+/* small tweaks for spacing and hero image */
+.bg-body-tertiary { background-color: #f8f9fa; } 
+
+.card-img-top { object-fit: cover; height: 180px; }
+@media (min-width: 992px) {
+  .container.d-flex { gap: 4rem; }
+}
+
+/* Responsive grid for product cards */
+.products-grid {
+  display: grid;
+  gap: 20px;
+  padding: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+
+
+.card-image {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border-radius: 8px;
+  display: block;
+}
+
+.prodex-min {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #333;
+  letter-spacing: 1px;
+  margin-right: 20px;
+}
+
+.fallingtextcom{
+  margin-bottom: 40px;
+  
+}
+

@@ -1,39 +1,32 @@
 import React from "react";
-import Card from "./Card";
-import iphone16 from "../assets/iphone16.jpeg";
-import MacBook from "../assets/MacBook Pro.jpg";
-import pen from "../assets/pen.jpeg";
 
-
-function Home() {
+function Home({ totalProducts, lowStockItems, outOfStockItems }) {
   return (
-    <div  className="products-grid">
-      <Card
-        title="MacBook Pro"
-        description="High performance laptop for creators."
-        category="Electronics"
-        price="55000"
-        image={MacBook}
-      />
+    <div>
+      <h2 className="mb-4">Inventory Dashboard</h2>
 
-      <Card
-        title="iphone 16"
-        description="High performance mobile for creators"
-        category="Electronics"
-        image={iphone16}
-        price="25000"
-      />
+      <div className="row g-3">
+        <div className="col-md-4">
+          <div className="card text-center p-4">
+            <h5>Total Products</h5>
+            <h2>{totalProducts}</h2>
+          </div>
+        </div>
 
-      <Card
-        title="pen"
-        description="Learn React with hands-on practice."
-        category="stationery"
-        image={pen}
-        price="20"
-      />
+        <div className="col-md-4">
+          <div className="card text-center p-4">
+            <h5>Low Stock Items</h5>
+            <h2>{lowStockItems}</h2>
+          </div>
+        </div>
 
-
-
+        <div className="col-md-4">
+          <div className="card text-center p-4">
+            <h5>Out of Stock</h5>
+            <h2>{outOfStockItems}</h2>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
